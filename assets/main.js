@@ -14,6 +14,13 @@ $('#find').on('click', function(event) {
     fetch(BTapiUrl + search + BTapiKey)
     .then(data => data.json())
     .then(result => {
+        // NEED A LOOP TO ITERATE
+        $('#name').text(result[0].artist.name)
+        $('#image').attr('src', result[0].artist.thumb_url)
+        $('#dateTime').text(result[0].datetime)
+        $('#venue').text(result[0].venue.name)
+        $('#location').text(result[0].venue.location)
+        $('#purchase').attr('href', results[0].offers[0].url)
         console.log(result);
     })
     
@@ -25,7 +32,7 @@ $('#find').on('click', function(event) {
         result.items.forEach(item => {
             video = 
             `
-            <iframe width="420" height="315" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+            <iframe width="480" height="275" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
             `
             $('#player').append(video);
         })
