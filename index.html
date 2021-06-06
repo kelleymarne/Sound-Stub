@@ -1,93 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Local Concerts</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
 
     <div class="nav-bar">
-        <a href="" class="nav-bar-el">Link 1</a>
-        <a href="" class="nav-bar-el">Link 2</a>
-        <a href="" class="nav-bar-el">Link 3</a>
-        <a href="" class="nav-bar-el">Link 4</a>
+        <a href="#" class="nav-bar-el">Link 1</a>
+        <a href="#" class="nav-bar-el">Link 2</a>
+        <a href="#" class="nav-bar-el">Link 3</a>
+        <a href="#" class="nav-bar-el">Link 4</a>
     </div>
 
     <div class="box-holder">
         <div class="box-1">
-            <div class="artist-name">
-                <h1>Placeholder Text</h1>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Enter Search Here :)">
-            </div>
-        </div>
-
-        <div class=box-2>
-            <div class="youtube">
-                <h1>Placeholder text</h1>
-            </div>
-            <div class="info">
-                <h1>Placeholder text</h1>
-            </div>
+            <form id="user-form" class="card-body text-center">
+                <label class="form-label" for="artistname">Artist/Band Name</label>
+                <br>
+                <input name="search" id="search" type="text" autofocus="true" class="form-input"
+                    placeholder="Artist/Band Name" />
+                <button type="submit" id="find" class="btn btn-primary">Find</button>
         </div>
     </div>
 
-    <script src="assets/script.js"></script>
+    <div class="box-2 row">
+        <div class="youtube col-6 text-center" id="player"></div>
+
+        <div class="info col-6" id="concert info">
+            <span id="name">Artist Name</span>
+            <span id="image">Thumbnail</span>
+            <span id="dateTime">Date & Time of Event</span>
+            <span id="venue">Venue Info</span>
+            <span id="purchase"><a href="#">Buy Tickets!</a></span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/main.js"></script>
 </body>
+
 </html>
-
-
-<!-- CSS file
-
-.nav-bar {
-    background-color: #333;
-    overflow: hidden;
-}
-
-.nav-bar-el {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.nav-bar-el:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.box-holder {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.box-1 {
-    border: 1px solid black;
-    width: 50%;
-    padding: 10px;
-}
-
-.box-2 {
-    border: 1px solid black;
-    width: 50%;
-}
-
-.artist-name, .search-bar {
-    padding-left: 10%;
-}
-
-.youtube, .info {
-    border: 1px solid black;
-    padding-left: 10%;
-    height: 200%;
-}
-
--->
