@@ -38,19 +38,25 @@
 .box-2 {
     border: 1px solid black;
     /* width: 50%; */
+    padding: 10px;
+    
+
 }
 
 .search-bar {
     padding-left: 10%;
 }
 
-.youtube, .info {
-    border: 1px solid black;
-    /* padding-left: 10%; */
-    /* height: 200%; */
-}
-.info span {
+#event {
     display: flex;
     flex-direction: row;
-
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin-top: 5px;
+}
+.info-body {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    text-align: center;
 }
